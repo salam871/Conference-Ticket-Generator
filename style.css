@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --netral-0: hsl(0, 0%, 100%);
+  --neutral-300: hsl(252, 6%, 83%);
+  --neutral-500: hsl(245, 15%, 58%);
+  --neutral-700: hsl(245, 19%, 35%);
+  --neutral-900: hsl(248, 70%, 10%);
+  --orange-500: hsl(7, 88%, 67%);
+  --orange-700: hsl(7, 71%, 60%);
+  --name-gradient: 180deg, hsl(7, 86%, 67%), hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  background: url("./assets/images/pattern-squiggly-line-top.svg") top 35px
+      right 0 no-repeat,
+    url("./assets/images/pattern-squiggly-line-bottom-desktop.svg") bottom left
+      no-repeat,
+    url("./assets/images/pattern-lines.svg") top center / 100% auto no-repeat,
+    url("./assets/images/pattern-circle.svg") 72% center no-repeat,
+    url("./assets/images/background-desktop.png") left top / cover no-repeat;
+  color: var(--netral-0);
+
+  font-family: "Inconsolata", sans-serif;
+  font-size: 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+
+.logo {
+  margin: 35px;
+  height: 30px;
+  width: 210px;
+}
+
+h2,
+p {
+  margin: 0 auto 20px auto;
+}
+
+form {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto auto auto;
+  width: 500px;
+  text-align: center;
+  flex: 1;
+}
+
+.file-upload {
+  position: relative;
+  width: 400px;
+  height: 100px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+#avatar {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.upload-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border: 2px dashed var(--neutral-500);
+  border-radius: 8px;
+  background-color: hsla(252, 6%, 83%, 0.2);
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.upload-icon {
+  height: 35px;
+  width: 35px;
+  border-radius: 10px;
+  background-color: hsla(252, 6%, 83%, 0.3);
+  border: 1px solid var(--neutral-300);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.upload-text {
+  font-size: 16px;
+}
+
+.upload-invalid,
+.email-invalid,
+.fullname-invalid {
+  font-size: 10px;
+  color: var(--orange-700);
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+  display: none;
+}
+
+.upload-note {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+  padding: 5px;
+  font-size: 10px;
+}
+
+.full-name,
+.email-address,
+.github-acc,
+.avatar-upload,
+.submit-btn {
+  margin: 20px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 15px;
+}
+
+.btn {
+  width: 400px;
+  height: 35px;
+  border-radius: 10px;
+  background-color: var(--orange-500);
+  border: none;
+  color: var(--neutral-900);
+  font-family: "Inconsolata", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#full-name,
+#email-address,
+#github-acc {
+  width: 400px;
+  height: 35px;
+  border: 1px solid var(--neutral-300);
+  background-color: hsla(252, 6%, 83%, 0.3);
+  border-radius: 10px;
+  outline: none;
+  color: var(--netral-0);
+  font-size: 20px;
+  font-family: "Inconsolata", sans-serif;
+}
+
+#full-name:focus,
+#email-address:focus,
+#github-acc:focus {
+  outline: 1px solid var(--neutral-500);
+}
+
+input:invalid {
+  border: 1px solid var(--orange-700);
+}
+
+.confirmation {
+  flex: 1;
+  display: none;
+}
+
+#name {
+  background: -webkit-linear-gradient(var(--name-gradient));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.conf-text {
+  text-align: center;
+}
+
+.conf-text p span {
+  font-weight: bold;
+  color: var(--orange-500);
+}
+
+.ticket {
+  background-image: url("./assets/images/pattern-ticket.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 182px;
+  width: 390px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo-date {
+  display: flex;
+  flex-direction: column;
+}
+
+.ticket span {
+  margin-left: 50px;
+}
+
+.name-and-username {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.customer-details,
+.github-details {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+
+.customer-photo {
+  height: 60px;
+  width: 60px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 480px) {
+  body {
+    background: url("./assets/images/pattern-squiggly-line-top.svg") top 35px
+        right 0 no-repeat,
+      url("./assets/images/pattern-squiggly-line-bottom-mobile.svg") bottom left
+        no-repeat,
+      url("./assets/images/pattern-lines.svg") top center / 100% auto no-repeat,
+      url("./assets/images/pattern-circle.svg") 72% center no-repeat,
+      url("./assets/images/background-mobile.png") left top / cover no-repeat;
+  }
+
+  form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 720px) {
+  body {
+    background: url("./assets/images/pattern-squiggly-line-top.svg") top 35px
+        right 0 no-repeat,
+      url("./assets/images/pattern-squiggly-line-bottom-mobile.svg") bottom left
+        no-repeat,
+      url("./assets/images/pattern-lines.svg") top center / 100% auto no-repeat,
+      url("./assets/images/pattern-circle.svg") 72% center no-repeat,
+      url("./assets/images/background-tablet.png") left top / cover no-repeat;
+  }
+
+  form {
+    width: 100%;
+  }
+}
