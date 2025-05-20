@@ -73,6 +73,12 @@ form {
   margin-bottom: 20px;
 }
 
+#avatar-preview {
+  height: 100px;
+  width: 100px;
+  display: none;
+}
+
 #avatar {
   position: absolute;
   width: 100%;
