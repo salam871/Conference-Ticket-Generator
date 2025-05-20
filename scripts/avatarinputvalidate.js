@@ -44,6 +44,10 @@ function customerAvatar() {
     const reader = new FileReader();
     reader.onload = function (e) {
       document.getElementById("customer-photo").src = e.target.result;
+      document.getElementById("avatar-preview").src = e.target.result;
+      document.getElementById("avatar-preview").style.display = "block";
+      document.querySelector(".upload-icon svg").style.display = "none";
+      document.querySelector(".upload-text").style.display = "none";
     };
     reader.readAsDataURL(file);
   });
